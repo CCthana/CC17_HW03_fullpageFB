@@ -1,0 +1,679 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif;
+   font-weight: 500;
+}
+
+html {
+   --header : 80px;
+  
+}
+
+body {
+   background-color: #f0f2f5;
+}
+
+
+header {
+   background-color: white;
+   height: 56px;
+   display: flex;
+   justify-content: space-between;
+   padding-inline: 8px;
+   width: 100%;
+   position: fixed;
+   
+}
+
+/* main */
+
+.Main-wrapper {
+   min-height: calc(100vh - var(--header));
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.sidebar-left {
+   min-height: 100vh;
+   flex-basis: 360px;
+   flex-direction: column;
+   
+   
+}
+
+.newsfeed {
+   
+   min-height: 100vh;
+   flex-basis: 680px;
+   padding-top: 70px;
+}
+
+.sidebar-right {
+   
+   min-height: 100vh;
+   flex-basis: 360px;
+   margin-top: 70px;
+   padding: 8px;
+}
+
+
+/* navbar */
+nav.left {
+   
+   width: 320px;
+   display: flex;
+   gap: 2px;
+   align-items: center;
+   
+}
+
+.searchbox {
+   display: flex  ;
+   align-items: center;
+   justify-content: start;
+   background-color: #f0f2f5;
+   border-radius: 40px;
+}
+
+.searchicon {
+  width: 40px;
+}
+
+nav.left input {  
+   height: 40px;
+   border: none;
+   border-radius: 40px;
+   padding-inline: 8px;
+   font-size: 15px;
+   font-weight: 400;
+   outline: none;
+   flex-grow: 1;
+   background-color: #f0f2f5;
+}
+
+nav.center {  
+   /* flex-grow: 1; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+}
+
+nav.center .boxicon {
+   width: 130px;
+   height: 90%;
+   display: flex;
+   justify-content: center;
+   color: #65676b;;
+   margin: 4px;
+
+}
+
+.boxicon:hover {
+   cursor: pointer;
+   background-color: #d7dadf;
+   border-radius: 8px;
+}
+
+nav.center .active {
+   width: 130px;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   color: #1877F2;;
+   border-bottom: 3px solid #1877F2;
+   
+}
+
+
+nav.right {
+   width: 320px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 8px;
+   
+}
+
+nav.right .roundicon {
+   width: 40px;
+   height: 40px;
+   background-color: #e4e6eb;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   overflow: hidden;
+   color: #65676b;
+   
+}
+
+nav.right .roundicon:hover {
+   cursor: pointer;
+   background-color: #d7dadf;
+}
+
+
+/* menu */
+
+.leftmenu {
+   margin-top: 70px;
+   position: fixed;
+   /* padding: 8px 16px; */
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+   font-size: 15px;   
+   
+
+}
+
+.leftmenu .leftprofile {
+   width: 36px;
+   height: 36px;
+   border-radius: 50px;
+   overflow: hidden;
+   vertical-align: baseline;
+   margin-right: 12px;
+}
+
+.leftmenu .feeds{
+   background-color: none;
+}
+
+.leftmenu .seemore {
+   width: 36px;
+   height: 36px;
+   border-radius: 50px;
+   align-items: center;
+   background-color: #e4e6eb;
+   margin-right: 12px;
+   display: flex;
+   align-items: center ;
+   justify-content: center;
+}
+
+.leftmenu i {
+   width: 36px;
+   height: 36px;
+   margin-right: 12px;
+}
+
+
+.leftmenu ul, li {
+   list-style: none;
+   padding-left: 8px;
+}
+
+.leftmenu li {
+   width: 280px;
+   height: 52px;
+   display: flex;
+   align-items: center;
+  
+  
+
+}
+
+.leftmenu li:hover {
+   background-color: #d7dadf;
+   border-radius: 8px;
+}
+
+.leftbreakline {
+   margin-top: 16px;
+   border-bottom: 2px solid #ced0d4;
+}
+
+.shortcut {
+   display: flex;
+   position: fixed;
+   flex-direction: column;
+
+   align-items: center;
+   justify-content: center;
+}
+
+
+.leftmenu h3 {
+   font-size: 17px;
+   margin: 12px;
+   padding-top: 4px;
+   color: #65676b;
+   
+}
+
+
+.leftmenu img {
+   width: 36px;
+   height: 36px;
+   border-radius: 6px;
+   align-items: center;
+  
+   margin-right: 12px;
+   display: flex;
+   align-items: center ;
+   justify-content: center;
+}
+
+
+/* sidebar right */
+
+.rSidebar {
+   position: fixed;
+   width: 340px; 
+}
+
+.sidebar-right h3 {
+color: #696c70;
+}
+
+
+.rSidebarTitle {
+   display: flex;
+   justify-content: space-between;
+   
+}
+
+.rSidebarTitle svg {
+   margin: 4px;
+   margin-right: 8px;
+   margin-bottom: 12px;
+   color: #696c70;
+}
+
+.fbContact {
+   display: flex;
+   align-items: center;
+   margin-bottom: 4px;
+   height: 52px;
+   padding-top: 4px;
+   position: relative;
+   
+}
+
+.profileimg img {
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   overflow: hidden;
+   margin-right: 12px;
+   margin-left: 8px;
+}
+
+.green {
+   position: absolute;
+    background-color: forestgreen;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    bottom: 8px;
+    left: 33px;
+}
+
+.fbContact span {
+   padding-bottom: 6px;
+   color: #050505;
+}
+
+.fbContact:hover {
+   cursor: pointer;
+   background-color: #d7dadf;
+   border-radius: 6px;
+}
+
+
+/*  center  */
+
+.cardNewpost {
+   height: 123px;
+   background-color: white;
+   padding: 12px 16px 10px 16px;
+   border-radius: 10px;
+   box-shadow: 1px 1px 4px #ced0d2;
+   margin-bottom: 20px;
+  
+}
+
+.createpost {
+   display: flex;
+   justify-content: start;
+   gap: 8px;
+   padding-bottom: 14px;
+   border-bottom: 1px solid #e4e6eb;
+}
+
+
+.createpost img {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.createpost input {
+   width: 600px;
+   height: 40px;
+   border-radius: 20px;
+   outline: none;
+   border: none;
+   background-color: #f0f2f5;
+   padding: 16px;
+   color: #75777b;
+   font-size: 18px;
+   font-weight: 400;
+}
+
+.createpostbot {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 40px;
+   padding-right: 40px;
+}
+
+.posttype {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 15px;
+}
+
+.posttype > span {
+   margin-left: 8px;
+   font-size: 14px;
+   color: #898a8d;
+}
+
+.postbox {
+   /* height: 700px; */
+   background-color: white;
+   padding: 12px 16px 10px 16px;
+   border-radius: 10px;
+   box-shadow: 1px 1px 4px #ced0d2;
+   margin-bottom: 20px;
+}
+
+
+.posthead {
+   height: 52px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
+}
+
+.profilepost {
+   width: 40px;
+   height: 40px;
+   border: 1px solid rgb(210, 210, 210);
+   border-radius: 50%;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 8px;
+   margin-top: 2px;
+   
+}
+
+.pagename {
+   flex-grow: 1;
+   padding: 4px;
+   font-size: 16px;
+}
+
+.posttime {
+   color: #65676B;
+   font-weight: 400;
+   font-size: 13px;
+}
+.postmenu {
+   color: #6c737b;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 4px;
+   margin-right: 4px;
+   margin-top: 8px;
+}
+
+
+.postmenuico {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.postmenuico:hover {
+   background-color: #e4e6eb;
+   cursor: pointer;
+}
+
+.profilepost:hover {
+   cursor: pointer;
+}
+.pagename > span:hover {
+   cursor: pointer;
+   text-decoration: underline;
+}
+.posttime > span:hover {
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+.postdescrip {
+   margin: 8px;
+   font-weight: 400;
+   margin-bottom: 12px;
+}
+
+.postphoto {
+   width: 100%;
+   margin-top: 8px;
+}
+
+.postphotoTop  {
+   width: 100%;
+   height: 400px;
+   overflow: hidden;
+   border: 2px solid white;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+}
+
+.postphotoBot  {
+   height: 300px;
+   overflow: hidden;
+   flex-grow: 1;
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+}
+
+.postphotoBot > img {
+   border: 2px solid white;
+}
+
+
+.postreaction {
+   margin-top: 12px;
+}
+
+.reacttop {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-bottom: 14px;
+}
+
+.reacttop > span {
+   font-weight: 200;
+}
+
+.like {
+   flex-grow: 1;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+}
+
+.reactlike {
+   width: 25px;
+   height: 25px;
+   border: 2px solid white;
+   border-radius: 50%;
+   z-index: 2;
+  
+}
+
+.reactllove{
+   width: 25px;
+   height: 25px;
+   border: 2px solid white;
+   border-radius: 50%;
+   position: relative;
+   left: -7px;
+}
+
+.reacttop p {
+   font-weight: 400;
+   color: #65676b;
+   
+}
+
+.comment, .share {
+   margin-left: 8px;
+   margin-right: 8px;
+
+}
+.postreaction > hr {
+   color: rgb(237, 237, 237, 0.4);
+}
+
+.reactbot {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 20px;
+}
+
+.reactbox {
+   
+   width: 33%;
+   height: 44px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 5px;
+   gap: 8px;
+   color: #65676b;
+   margin-top: 4px;
+}
+
+.reactbox:hover {
+   cursor: pointer;
+   background-color: #cccccc;;
+}
+
+.postphotoToplink > img {
+   width: 100%;
+}
+.postphotoBotlink {
+   height: 80px;
+   background-color: #f0f2f5;
+   text-align: start;
+   padding-top: 8px;
+   padding-left: 14px;
+   position: relative;
+   
+}
+
+.ilink {
+   width: 28px;
+   height: 28px;
+   background-color: white;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   right: 40px;
+   bottom: 70px;
+}
+
+.postonephoto img {
+   width: 100%;
+}
+
+.postphotoAD img{
+   width: 100%;
+}
+
+.adpostdescrip {
+   margin: 10px;
+   font-weight: 400;
+   margin-bottom: 12px;
+}
+
+.readmore {
+   font-size: 18px;
+}  
+
+.readmore:hover {
+   cursor: pointer;
+   text-decoration: underline;
+}
+.coverupdate {
+   font-weight: 300;
+}
+
+.ilink:hover {
+   cursor: pointer;
+}
+.postphotoBotlink, .postphotoToplink {
+   cursor: pointer;
+}
+
+.postreaction .comment:hover {
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+.postreaction .share:hover {
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+   
+   .sidebar-left {
+      width: 0;
+      visibility: hidden;
+      
+      }
+}
+
+@media (max-width: 1060px) {
+   .sidebar-right {
+      width: 0px;
+      visibility: hidden;
+   }
+
+   .newsfeed {
+     min-width: 400px;
+   }
+
+   .cardNewpost {
+     visibility: hidden;
+   }
+}
+
